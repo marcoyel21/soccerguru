@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Send html file to bucket
+sudo gsutil cp /home/airflow/dags/dags-deploy/index.html gs://bets_backend

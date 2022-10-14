@@ -1,0 +1,74 @@
+team,team,flag,name
+1,1,https://cdn.sportmonks.com/images/soccer/teams/1/1.png,West Ham United
+6,6,https://cdn.sportmonks.com/images/soccer/teams/6/6.png,Tottenham Hotspur
+8,8,https://cdn.sportmonks.com/images/soccer/teams/8/8.png,Liverpool
+9,9,https://cdn.sportmonks.com/images/soccer/teams/9/9.png,Manchester City
+13,13,https://cdn.sportmonks.com/images/soccer/teams/13/13.png,Everton
+14,14,https://cdn.sportmonks.com/images/soccer/teams/14/14.png,Manchester United
+15,15,https://cdn.sportmonks.com/images/soccer/teams/15/15.png,Aston Villa
+18,18,https://cdn.sportmonks.com/images/soccer/teams/18/18.png,Chelsea
+19,19,https://cdn.sportmonks.com/images/soccer/teams/19/19.png,Arsenal
+20,20,https://cdn.sportmonks.com/images/soccer/teams/20/20.png,Newcastle United
+25,25,https://cdn.sportmonks.com/images/soccer/teams/25/25.png,Watford
+27,27,https://cdn.sportmonks.com/images/soccer/teams/27/27.png,Burnley
+29,29,https://cdn.sportmonks.com/images/soccer/teams/29/29.png,Wolverhampton Wanderers
+33,33,https://cdn.sportmonks.com/images/soccer/teams/1/33.png,Norwich City
+36,36,https://cdn.sportmonks.com/images/soccer/teams/4/36.png,Celta de Vigo
+37,37,https://cdn.sportmonks.com/images/soccer/teams/5/37.png,Roma
+42,42,https://cdn.sportmonks.com/images/soccer/teams/10/42.png,Leicester City
+43,43,https://cdn.sportmonks.com/images/soccer/teams/11/43.png,Lazio
+51,51,https://cdn.sportmonks.com/images/soccer/teams/19/51.png,Crystal Palace
+65,65,https://cdn.sportmonks.com/images/soccer/teams/1/65.png,Southampton
+68,68,https://cdn.sportmonks.com/images/soccer/teams/4/68.png,Borussia Dortmund
+71,71,https://cdn.sportmonks.com/images/soccer/teams/7/71.png,Leeds United
+78,78,https://cdn.sportmonks.com/images/soccer/teams/14/78.png,Brighton & Hove Albion
+83,83,https://cdn.sportmonks.com/images/soccer/teams/19/83.png,FC Barcelona
+90,90,https://cdn.sportmonks.com/images/soccer/teams/26/90.png,FC Augsburg
+102,102,https://cdn.sportmonks.com/images/soccer/teams/6/102.png,Genoa
+103,103,https://cdn.sportmonks.com/images/soccer/teams/7/103.png,Granada
+106,106,https://cdn.sportmonks.com/images/soccer/teams/10/106.png,Getafe
+107,107,https://cdn.sportmonks.com/images/soccer/teams/11/107.png,Atlético Baleares
+109,109,https://cdn.sportmonks.com/images/soccer/teams/13/109.png,Fiorentina
+112,112,https://cdn.sportmonks.com/images/soccer/teams/16/112.png,Ferencváros
+113,113,https://cdn.sportmonks.com/images/soccer/teams/17/113.png,Milan
+132,132,https://cdn.sportmonks.com/images/soccer/teams/4/132.png,Truro City
+214,214,https://cdn.sportmonks.com/images/soccer/teams/22/214.png,Valencia
+236,236,https://cdn.sportmonks.com/images/soccer/teams/12/236.png,Brentford
+267,267,https://cdn.sportmonks.com/images/soccer/teams/11/267.png,Venezia
+271,271,https://cdn.sportmonks.com/images/soccer/teams/15/271.png,Lens
+272,272,https://cdn.sportmonks.com/images/soccer/teams/16/272.png,Anorthosis
+277,277,https://cdn.sportmonks.com/images/soccer/teams/21/277.png,RB Leipzig
+292,292,https://cdn.sportmonks.com/images/soccer/teams/4/292.png,Vancouver Whitecaps
+293,293,https://cdn.sportmonks.com/images/soccer/teams/5/293.png,Brøndby
+297,297,https://cdn.sportmonks.com/images/soccer/teams/9/297.png,Oxford United
+331,331,https://cdn.sportmonks.com/images/soccer/teams/11/331.png,Wisła Kraków
+332,332,https://cdn.sportmonks.com/images/soccer/teams/12/332.png,Independiente Medellín
+343,343,https://cdn.sportmonks.com/images/soccer/teams/23/343.png,Fylde
+345,345,https://cdn.sportmonks.com/images/soccer/teams/25/345.png,Spezia
+346,346,https://cdn.sportmonks.com/images/soccer/teams/26/346.png,Udinese
+347,347,https://cdn.sportmonks.com/images/soccer/teams/27/347.png,Alanyaspor
+354,354,https://cdn.sportmonks.com/images/soccer/teams/2/354.png,Malmö FF
+366,366,https://cdn.sportmonks.com/images/soccer/teams/14/366.png,Eintracht Frankfurt
+377,377,https://cdn.sportmonks.com/images/soccer/teams/25/377.png,Rayo Vallecano
+397,397,https://cdn.sportmonks.com/images/soccer/teams/13/397.png,Empoli
+459,459,https://cdn.sportmonks.com/images/soccer/teams/11/459.png,Osasuna
+485,485,https://cdn.sportmonks.com/images/soccer/teams/5/485.png,Real Betis
+503,503,https://cdn.sportmonks.com/images/soccer/teams/23/503.png,FC Bayern München
+510,510,https://cdn.sportmonks.com/images/soccer/teams/30/510.png,VfL Wolfsburg
+522,522,https://cdn.sportmonks.com/images/soccer/teams/10/522.png,Sampdoria
+528,528,https://cdn.sportmonks.com/images/soccer/teams/16/528.png,Espanyol
+585,585,https://cdn.sportmonks.com/images/soccer/teams/9/585.png,Cagliari
+594,594,https://cdn.sportmonks.com/images/soccer/teams/18/594.png,Real Sociedad
+597,597,https://cdn.sportmonks.com/images/soccer/teams/21/597.png,Napoli
+613,613,https://cdn.sportmonks.com/images/soccer/teams/5/613.png,Torino
+625,625,https://cdn.sportmonks.com/images/soccer/teams/17/625.png,Juventus
+645,645,https://cdn.sportmonks.com/images/soccer/teams/5/645.png,Mallorca
+676,676,https://cdn.sportmonks.com/images/soccer/teams/4/676.png,Sevilla
+682,682,https://cdn.sportmonks.com/images/soccer/teams/10/682.png,PSV
+683,683,https://cdn.sportmonks.com/images/soccer/teams/11/683.png,Borussia Mönchengladbach
+708,708,https://cdn.sportmonks.com/images/soccer/teams/4/708.png,Atalanta
+774,774,https://cdn.sportmonks.com/images/soccer/teams/6/774.png,Deportivo Capiatá
+794,794,https://cdn.sportmonks.com/images/soccer/teams/26/794.png,FSV Mainz 05
+798,798,https://cdn.sportmonks.com/images/soccer/teams/798/798.png,
+851,851,https://cdn.sportmonks.com/images/soccer/teams/851/851.png,
+999,999,https://cdn.sportmonks.com/images/soccer/teams/7/999.png,VfL Bochum 1848

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Get latest version in Storage
+LATEST_VERSION=$(gsutil ls gs://ubiquitous-goggles-bucket/football-prediction/ | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
+
+# Get files of the latest model (this is to guarantee we always have the .py files mostly)
+sudo gsutil -m cp -r gs://ubiquitous-goggles-bucket/football-prediction/v$LATEST_VERSION/* /home/airflow/dags/dags-model/
+
+# Remove previous distribution and copy the new packages into it
+rm -r /home/airflow/dags/dags-model/dist
+mv /home/airflow/dags/dags-model/packages /home/airflow/dags/dags-model/dist
