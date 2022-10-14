@@ -2,6 +2,8 @@ from datetime import timedelta
 from airflow import DAG
 from airflow.operators.bash_operator import BashOperator
 from airflow.utils.dates import days_ago
+#from airflow.providers.discord.hooks.discord_webhook import DiscordWebhookHook
+from airflow.providers.discord.operators.discord_webhook import DiscordWebhookOperator
 
 import os
 
@@ -17,13 +19,20 @@ params = {
     'path_etl_predictions_api': path_etl_predictions_api,
     'path_etl_predictions_model': path_etl_predictions_model}
 
-dag = DAG(
+with DAG(
     'process_1_elt',
     description = '2 step elt: API call + feat eng',
     #“At 13:00 on Friday.”    
     schedule_interval='0 13 * * 5',
     start_date = days_ago(1),
-    tags=["football"])
+    tags=["football"],
+) as dag:
+
+    alert = DiscordWebhookOperator(
+        task_id= "discord_alert_start",
+        http_conn_id = 'discord',
+        webhook_endpoint ='webhooks/1030306654106951731/5MHkAQZMKDMUn30n1HjL-BHtDSVU5QkQFK7sZQmBXVhWtK4I-SzI97E0g2u85gjVzuNS', 
+        message = 'DAG ETL started succesfully',)
 
 t1 = BashOperator(
     task_id='etl_api_call',
@@ -54,6 +63,16 @@ t4 = BashOperator(
     bash_command='python3 {{params.path_etl_predictions_model}}',
     dag=dag)
 
+alert2 = DiscordWebhookOperator(
+    task_id= "discord_alert_finish",
+    http_conn_id = 'discord',
+    webhook_endpoint ='token', 
+    message = 'DAG ETL finished succesfully',
+    dag=dag)
+
+
+
 t1 >> t2
 t2 >> t3
 t3 >> t4
+t4 >> alert2
