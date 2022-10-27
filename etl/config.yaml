@@ -1,0 +1,15 @@
+connection:
+  user: root
+  host: ${db_ip}
+
+
+sports_token: ${token}
+
+leagues:
+  271:
+    current_season_id: 19686
+    name: Superliga
+    teams:
+      53: Celtic
+      62: Rangers
+      66: Hibernian
