@@ -54,7 +54,7 @@ from datetime import date, timedelta
 import numpy as np
 
 start = date.today()
-end = start + timedelta(7)
+end = start + timedelta(360)
 
 end = end.strftime("%Y-%m-%d")
 start = start.strftime("%Y-%m-%d")
