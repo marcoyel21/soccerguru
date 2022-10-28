@@ -56,7 +56,7 @@ import numpy as np
 
 
 end = date.today()
-start = end - timedelta(7)
+start = end - timedelta(360)
 
 end = end.strftime("%Y-%m-%d")
 start = start.strftime("%Y-%m-%d")
