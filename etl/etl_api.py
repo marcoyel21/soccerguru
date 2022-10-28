@@ -50,7 +50,7 @@ config = yaml.safe_load(config_file)
 leagues = config['leagues']
 
 end = date.today()
-start = end - timedelta(7)
+start = end - timedelta(360)
 
 end = end.strftime("%Y-%m-%d")
 start = start.strftime("%Y-%m-%d")
