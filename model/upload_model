@@ -4,7 +4,7 @@
 # python /home/airflow/dags/dags-model/setup.py sdist
 
 # Get latest version in Storage
-LATEST_VERSION=$(gsutil ls gs://soccer_models  | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
+LATEST_VERSION=$(gsutil ls gs://soccer_models/  | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
 NEW_LATEST_VERSION=$((LATEST_VERSION+1))
 
 # Upload files to the new latest version folder in Storage
