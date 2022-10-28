@@ -4,18 +4,18 @@
 # python /home/airflow/dags/dags-model/setup.py sdist
 
 # Get latest version in Storage
-LATEST_VERSION=$(gsutil ls gs://ubiquitous-goggles-bucket/football-prediction/ | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
+LATEST_VERSION=$(gsutil ls gs://soccer_models  | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
 NEW_LATEST_VERSION=$((LATEST_VERSION+1))
 
 # Upload files to the new latest version folder in Storage
-sudo gsutil cp /home/airflow/dags/dags-model/model.pkl gs://ubiquitous-goggles-bucket/football-prediction/v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/airflow/dags/dags-model/processor_state.pkl gs://ubiquitous-goggles-bucket/football-prediction/v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/airflow/dags/dags-model/preprocess.py gs://ubiquitous-goggles-bucket/football-prediction/v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/airflow/dags/dags-model/model_prediction.py gs://ubiquitous-goggles-bucket/football-prediction/v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/airflow/dags/dags-model/dist/football_predict-0.1.tar.gz gs://ubiquitous-goggles-bucket/football-prediction/v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz
+sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
+sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/processor_state.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
+sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/preprocess.py gs://soccer_models/v$NEW_LATEST_VERSION/
+sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model_prediction.py gs://soccer_models /v$NEW_LATEST_VERSION/
+sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/dist/football_predict-0.1.tar.gz gs://soccer_models /v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz
 
 # Configurate ai-platform
 sudo gcloud config set ai_platform/region global
 
 # Upload the new version of the model (thi stakes some time)
-sudo gcloud beta ai-platform versions create v$NEW_LATEST_VERSION --model football_match_predictions --python-version 3.7 --runtime-version 2.8 --origin gs://ubiquitous-goggles-bucket/football-prediction/v$NEW_LATEST_VERSION/ --package-uris gs://ubiquitous-goggles-bucket/football-prediction/v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz --prediction-class model_prediction.CustomModelPrediction
+sudo gcloud beta ai-platform versions create v$NEW_LATEST_VERSION --model football_match_predictions --python-version 3.7 --runtime-version 2.8 --origin gs://soccer_models/v$NEW_LATEST_VERSION/ --package-uris gs://soccer_models/v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz --prediction-class model_prediction.CustomModelPrediction
