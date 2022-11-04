@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Get latest version in Storage
-LATEST_VERSION=$(gsutil ls gs://soccer_models/ | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
+LATEST_VERSION=$(gsutil ls gs://soccer_models/|   tail -1  | grep -Eo '[0-9]')
 
 # Get files of the latest model (this is to guarantee we always have the .py files mostly)
 gsutil -m cp -r gs://soccer_models/v$LATEST_VERSION/* /home/marcoyel21/airflow/dags/soccerguru/model/
