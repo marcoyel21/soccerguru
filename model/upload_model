@@ -11,7 +11,7 @@ NEW_LATEST_VERSION=$((LATEST_VERSION+1))
 gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
 gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/processor_state.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
 gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/preprocess.py gs://soccer_models/v$NEW_LATEST_VERSION/
-gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model_prediction.py gs://soccer_models /v$NEW_LATEST_VERSION/
+gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model_prediction.py gs://soccer_models/v$NEW_LATEST_VERSION/
 gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/dist/football_predict-0.1.tar.gz gs://soccer_models /v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz
 
 # Configurate ai-platform
