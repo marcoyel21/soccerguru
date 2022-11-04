@@ -42,7 +42,7 @@ t2 = BashOperator(
     task_id='html_to_bucket',
     depends_on_past=False,
     params=params,
-    bash_command='gsutil cp /home/airflow/dags/dags-deploy/index.html gs://bets_backend/',
+    bash_command='gsutil cp /home/marcoyel21/airflow/dags/soccerguru/deployment/index.html gs://bets_backend/',
     dag=dag)
 
 alert2 = DiscordWebhookOperator(
