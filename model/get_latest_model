@@ -4,7 +4,7 @@
 LATEST_VERSION=$(gsutil ls gs://soccer_models/ | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
 
 # Get files of the latest model (this is to guarantee we always have the .py files mostly)
-sudo gsutil -m cp -r gs://soccer_models/v$LATEST_VERSION/* /home/marcoyel21/airflow/dags/soccerguru/model/
+gsutil -m cp -r gs://soccer_models/v$LATEST_VERSION/* /home/marcoyel21/airflow/dags/soccerguru/model/
 
 # Remove previous distribution and copy the new packages into it
 rm -r /home/marcoyel21/airflow/dags/soccerguru/model/dist
