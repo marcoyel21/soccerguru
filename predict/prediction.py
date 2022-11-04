@@ -47,10 +47,10 @@ config_file = open(script_path_yaml, 'r')
 config = yaml.safe_load(config_file)
 
 ### Get latest version of the model
-# with open(script_path_latest_version, "r") as f:
-#     latest_version = f.read()
+with open(script_path_latest_version, "r") as f:
+    latest_version = f.read()
 
-latest_version = "20" ### Used for live demo
+#latest_version = "20" ### Used for live demo
 
 # print(latest_version)
 logger.info("II- Directories setup: Success") 
