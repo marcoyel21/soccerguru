@@ -8,14 +8,14 @@ LATEST_VERSION=$(gsutil ls gs://soccer_models/  | awk '{ print substr( $0, 53) }
 NEW_LATEST_VERSION=$((LATEST_VERSION+1))
 
 # Upload files to the new latest version folder in Storage
-sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/processor_state.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/preprocess.py gs://soccer_models/v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model_prediction.py gs://soccer_models /v$NEW_LATEST_VERSION/
-sudo gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/dist/football_predict-0.1.tar.gz gs://soccer_models /v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz
+gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
+gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/processor_state.pkl gs://soccer_models/v$NEW_LATEST_VERSION/
+gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/preprocess.py gs://soccer_models/v$NEW_LATEST_VERSION/
+gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/model_prediction.py gs://soccer_models /v$NEW_LATEST_VERSION/
+gsutil cp /home/marcoyel21/airflow/dags/soccerguru/model/dist/football_predict-0.1.tar.gz gs://soccer_models /v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz
 
 # Configurate ai-platform
-sudo gcloud config set ai_platform/region global
+gcloud config set ai_platform/region global
 
 # Upload the new version of the model (thi stakes some time)
-sudo gcloud beta ai-platform versions create v$NEW_LATEST_VERSION --model football_match_predictions --python-version 3.7 --runtime-version 2.8 --origin gs://soccer_models/v$NEW_LATEST_VERSION/ --package-uris gs://soccer_models/v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz --prediction-class model_prediction.CustomModelPrediction
+gcloud beta ai-platform versions create v$NEW_LATEST_VERSION --model football_match_predictions --python-version 3.7 --runtime-version 2.8 --origin gs://soccer_models/v$NEW_LATEST_VERSION/ --package-uris gs://soccer_models/v$NEW_LATEST_VERSION/packages/football_predict-0.1.tar.gz --prediction-class model_prediction.CustomModelPrediction
