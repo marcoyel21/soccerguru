@@ -45,7 +45,7 @@ t2 = BashOperator(
 alert2 = DiscordWebhookOperator(
     task_id= "discord_alert_finish",
     http_conn_id = 'discord',
-    webhook_endpoint ='token', 
+    webhook_endpoint ='webhooks/1030306654106951731/5MHkAQZMKDMUn30n1HjL-BHtDSVU5QkQFK7sZQmBXVhWtK4I-SzI97E0g2u85gjVzuNS', 
     message = 'DAG Predict finished succesfully',
     dag=dag)
 
