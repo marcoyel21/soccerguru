@@ -60,7 +60,7 @@ logger.info("II- Directories setup: Success")
 ### We will predict only on the next 7 days
 
 start = date.today()
-end = str(start + timedelta(7))
+end = str(start + timedelta(180))
 start = str(start)
 sql_query = "SELECT * FROM h2h.model2_predictions WHERE match_day BETWEEN '" + start + "' AND '" + end + "'"
 
