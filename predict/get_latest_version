@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Get latest version in Storage
-LATEST_VERSION=$(gsutil ls gs://soccer_models/ | awk '{ print substr( $0, 53) }' | sed 's/.$//' | sed 1,1d | sort -n | tail -1)
+LATEST_VERSION=$(gsutil ls gs://soccer_models/|   tail -1  | grep -Eo '[0-9]')
 
 # Write to a file so we read it
-echo $LATEST_VERSION > /home/marcoyel21/airflow/dags/soccerguru/model/latest_version.txt
+echo $LATEST_VERSION > /home/marcoyel21/airflow/dags/soccerguru/predict/latest_version.txt
