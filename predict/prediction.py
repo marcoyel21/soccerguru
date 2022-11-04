@@ -100,7 +100,7 @@ X = df[model_columns]
 # predictions = vnf.predict_json('ubiquitous-goggles', 'football_match_predictions', str(X.to_dict()), version = "v"+latest_version[:2])
 
 # Used for live demo
-predictions = vnf.predict_json('ubiquitous-goggles', 'football_match_predictions', str(X.to_dict()), version = "v"+latest_version)
+predictions = vnf.predict_json('soccerguru', 'football_match_predictions', str(X.to_dict()), version = "v"+latest_version)
 
 
 # Print the results 
